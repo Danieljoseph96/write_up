@@ -1,1 +1,4 @@
-danieljoseph.in
+Type: CNAME
+Name: www
+Value: danieljoseph96.github.io.
+TTL: 1 Hour
