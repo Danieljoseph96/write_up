@@ -1,0 +1,218 @@
+[
+  {
+    "id": "post-1",
+    "type": "excel",
+    "title": "Excel VLOOKUP Function Explained",
+    "date": "2025-02-17",
+    "excerpt": "Learn how to use VLOOKUP to search vertically within a dataset and return matching values quickly.",
+    "thumbnail": "../imgs/vlookup.png",
+    "content": "<div class='container py-4'><h2 class='fw-bold text-primary'>🔍 VLOOKUP – Vertical Lookup</h2><p>The <code>VLOOKUP</code> function searches for a value in the first column of a range and returns a value from another column in the same row.</p><pre><code>=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])</code></pre><p><strong>Example:</strong> <code>=VLOOKUP(A2, B2:D10, 3, FALSE)</code></p><img src='../imgs/vlookup-example.png' alt='VLOOKUP Example' class='img-fluid rounded shadow mb-3'></div>"
+  },
+  {
+    "id": "post-2",
+    "type": "excel",
+    "title": "Excel HLOOKUP Function Explained",
+    "date": "2025-02-17",
+    "excerpt": "HLOOKUP searches horizontally across the top row of a range to find data matches.",
+    "thumbnail": "../imgs/hlookup.png",
+    "content": "<div class='container py-4'><h2 class='fw-bold text-info'>📊 HLOOKUP – Horizontal Lookup</h2><p>The <code>HLOOKUP</code> function searches the top row of a range and returns a value from a specified row index.</p><pre><code>=HLOOKUP(lookup_value, table_array, row_index_num, [range_lookup])</code></pre><p><strong>Example:</strong> <code>=HLOOKUP('Q1', A1:E5, 3, FALSE)</code></p><img src='../imgs/hlookup-example.png' alt='HLOOKUP Example' class='img-fluid rounded shadow mb-3'></div>"
+  },
+  {
+    "id": "post-3",
+    "type": "excel",
+    "title": "Excel FILTER Function",
+    "date": "2025-02-17",
+    "excerpt": "Learn how to dynamically filter data in Excel using conditions without needing manual sorting.",
+    "thumbnail": "../imgs/filter.png",
+    "content": "<div class='container py-4'><h2 class='fw-bold text-warning'>🧮 FILTER – Dynamic Data Selection</h2><p><code>FILTER</code> returns an array of data that meets specific criteria. It’s dynamic and updates automatically.</p><pre><code>=FILTER(array, include, [if_empty])</code></pre><p><strong>Example:</strong> <code>=FILTER(A2:D20, C2:C20>5000)</code></p><img src='../imgs/filter-example.png' alt='FILTER Example' class='img-fluid rounded shadow mb-3'></div>"
+  },
+  {
+    "id": "post-4",
+    "type": "excel",
+    "title": "Excel UNIQUE Function",
+    "date": "2025-02-17",
+    "excerpt": "Remove duplicates instantly using Excel's UNIQUE function for clean datasets.",
+    "thumbnail": "../imgs/unique.png",
+    "content": "<div class='container py-4'><h2 class='fw-bold text-danger'>🎯 UNIQUE – Remove Duplicates</h2><p>The <code>UNIQUE</code> function extracts distinct values from a range or array.</p><pre><code>=UNIQUE(array, [by_col], [exactly_once])</code></pre><p><strong>Example:</strong> <code>=UNIQUE(A2:A50)</code></p><img src='../imgs/unique-example.png' alt='UNIQUE Example' class='img-fluid rounded shadow mb-3'></div>"
+  },
+  {
+    "id": "post-5",
+    "type": "excel",
+    "title": "Excel QUERY Function (Google Sheets)",
+    "date": "2025-02-17",
+    "excerpt": "Use SQL-like commands in Google Sheets to query your data tables dynamically.",
+    "thumbnail": "../imgs/query.png",
+    "content": "<div class='container py-4'><h2 class='fw-bold text-primary'>🧠 QUERY – SQL for Spreadsheets</h2><p>The <code>QUERY</code> function lets you use SQL-like syntax to manipulate your spreadsheet data.</p><pre><code>=QUERY(data, 'SELECT A, B WHERE C > 5000 ORDER BY B DESC', 1)</code></pre><p><strong>Example:</strong> Retrieve all rows where salary > 5000, sorted by name.</p><img src='../imgs/query-example.png' alt='QUERY Example' class='img-fluid rounded shadow mb-3'></div>"
+  },
+  {
+    "id": "post-6",
+    "type": "excel",
+    "title": "Excel SORT Function",
+    "date": "2025-02-17",
+    "excerpt": "Automatically sort data in ascending or descending order using the SORT function.",
+    "thumbnail": "../imgs/sort.png",
+    "content": "<div class='container py-4'><h2 class='fw-bold text-secondary'>📈 SORT – Auto Arrange Data</h2><p><code>SORT</code> organizes your data without manual sorting, and updates dynamically.</p><pre><code>=SORT(array, [sort_index], [sort_order], [by_col])</code></pre><p><strong>Example:</strong> <code>=SORT(A2:B20, 2, -1)</code></p><img src='../imgs/sort-example.png' alt='SORT Example' class='img-fluid rounded shadow mb-3'></div>"
+  },
+  {
+    "id": "post-7",
+    "type": "excel",
+    "title": "Excel XLOOKUP Function",
+    "date": "2025-02-17",
+    "excerpt": "XLOOKUP is the modern replacement for VLOOKUP and HLOOKUP with more flexibility and accuracy.",
+    "thumbnail": "../imgs/xlookup.png",
+    "content": "<div class='container py-4'><h2 class='fw-bold text-success'>🚀 XLOOKUP – Modern Lookup Tool</h2><p><code>XLOOKUP</code> searches a range or array and returns a corresponding value, both vertically and horizontally.</p><pre><code>=XLOOKUP(lookup_value, lookup_array, return_array, [if_not_found], [match_mode], [search_mode])</code></pre><p><strong>Example:</strong> <code>=XLOOKUP(A2, B2:B10, C2:C10, 'Not Found')</code></p><img src='../imgs/xlookup-example.png' alt='XLOOKUP Example' class='img-fluid rounded shadow mb-3'></div>"
+  },
+  {
+    "id": "post-8",
+    "type": "excel",
+    "title": "Excel IF Function",
+    "date": "2025-02-17",
+    "excerpt": "Perform logical tests and return results based on TRUE or FALSE conditions.",
+    "thumbnail": "../imgs/if.png",
+    "content": "<div class='container py-4'><h2 class='fw-bold text-warning'>⚖️ IF – Conditional Logic</h2><p>The <code>IF</code> function checks whether a condition is met, and returns one value if TRUE, and another if FALSE.</p><pre><code>=IF(logical_test, value_if_true, value_if_false)</code></pre><p><strong>Example:</strong> <code>=IF(A2>50, 'Pass', 'Fail')</code></p><img src='../imgs/if-example.png' alt='IF Example' class='img-fluid rounded shadow mb-3'></div>"
+  },
+  {
+    "id": "post-9",
+    "type": "excel",
+    "title": "Excel INDEX Function",
+    "date": "2025-02-17",
+    "excerpt": "The INDEX function returns the value of a cell within a specified range based on row and column numbers.",
+    "thumbnail": "../imgs/index.png",
+    "content": "<div class='container py-4'><h2 class='fw-bold text-success'>🔢 INDEX – Get Cell Value by Position</h2><p>The <code>INDEX</code> function returns the value of a cell inside a range given a row and column number.</p><pre><code>=INDEX(array, row_num, [column_num])</code></pre><p><strong>Example:</strong> <code>=INDEX(A2:C10, 3, 2)</code> → Returns the value from the 3rd row and 2nd column of the range.</p><img src='../imgs/index-example.png' alt='INDEX Example' class='img-fluid rounded shadow mb-3'></div>"
+  },
+  {
+    "id": "post-10",
+    "type": "excel",
+    "title": "Excel MATCH Function",
+    "date": "2025-02-17",
+    "excerpt": "Find the position of a value within a range using the MATCH function.",
+    "thumbnail": "../imgs/match.png",
+    "content": "<div class='container py-4'><h2 class='fw-bold text-info'>🎯 MATCH – Find Position of a Value</h2><p>The <code>MATCH</code> function searches for a specified item in a range and returns its relative position.</p><pre><code>=MATCH(lookup_value, lookup_array, [match_type])</code></pre><p><strong>Example:</strong> <code>=MATCH('Apple', A2:A10, 0)</code> → Returns the position of 'Apple' in A2:A10.</p><img src='../imgs/match-example.png' alt='MATCH Example' class='img-fluid rounded shadow mb-3'></div>"
+  },
+  {
+    "id": "post-11",
+    "type": "excel",
+    "title": "Excel INDEX + MATCH Combination",
+    "date": "2025-02-17",
+    "excerpt": "Combine INDEX and MATCH to perform powerful lookups more flexible than VLOOKUP.",
+    "thumbnail": "../imgs/indexmatch.png",
+    "content": "<div class='container py-4'><h2 class='fw-bold text-primary'>🧩 INDEX + MATCH – Advanced Lookup</h2><p>Use <code>INDEX</code> and <code>MATCH</code> together to find values based on both row and column lookups.</p><pre><code>=INDEX(return_range, MATCH(lookup_value, lookup_range, 0))</code></pre><p><strong>Example:</strong> <code>=INDEX(C2:C10, MATCH(A2, B2:B10, 0))</code> → Returns matching value from column C where B matches A2.</p><img src='../imgs/indexmatch-example.png' alt='INDEX MATCH Example' class='img-fluid rounded shadow mb-3'></div>"
+  },
+  {
+    "id": "post-12",
+    "type": "excel",
+    "title": "Excel SUMIFS Function",
+    "date": "2025-02-17",
+    "excerpt": "Add numbers that meet multiple criteria using the SUMIFS function.",
+    "thumbnail": "../imgs/sumifs.png",
+    "content": "<div class='container py-4'><h2 class='fw-bold text-warning'>➕ SUMIFS – Conditional Addition</h2><p><code>SUMIFS</code> adds numbers that satisfy one or more conditions.</p><pre><code>=SUMIFS(sum_range, criteria_range1, criteria1, [criteria_range2], [criteria2])</code></pre><p><strong>Example:</strong> <code>=SUMIFS(C2:C100, A2:A100, 'North', B2:B100, '>500')</code> → Adds sales where Region='North' and Value>500.</p><img src='../imgs/sumifs-example.png' alt='SUMIFS Example' class='img-fluid rounded shadow mb-3'></div>"
+  },
+  {
+    "id": "post-13",
+    "type": "excel",
+    "title": "Excel COUNTIFS Function",
+    "date": "2025-02-17",
+    "excerpt": "Count cells based on multiple criteria using the COUNTIFS function.",
+    "thumbnail": "../imgs/countifs.png",
+    "content": "<div class='container py-4'><h2 class='fw-bold text-danger'>🔢 COUNTIFS – Conditional Counting</h2><p><code>COUNTIFS</code> counts the number of cells that meet multiple conditions.</p><pre><code>=COUNTIFS(criteria_range1, criteria1, [criteria_range2], [criteria2])</code></pre><p><strong>Example:</strong> <code>=COUNTIFS(A2:A50, 'East', B2:B50, '>100')</code> → Counts all records from East region with values >100.</p><img src='../imgs/countifs-example.png' alt='COUNTIFS Example' class='img-fluid rounded shadow mb-3'></div>"
+  },
+  {
+    "id": "post-14",
+    "type": "excel",
+    "title": "Excel CONCAT Function",
+    "date": "2025-02-17",
+    "excerpt": "Combine text from multiple cells into one using CONCAT or CONCATENATE.",
+    "thumbnail": "../imgs/concat.png",
+    "content": "<div class='container py-4'><h2 class='fw-bold text-secondary'>🔗 CONCAT – Combine Text</h2><p>The <code>CONCAT</code> function joins values from multiple cells into a single string.</p><pre><code>=CONCAT(text1, [text2], ...)</code></pre><p><strong>Example:</strong> <code>=CONCAT(A2, ' ', B2)</code> → Joins first and last name with a space.</p><img src='../imgs/concat-example.png' alt='CONCAT Example' class='img-fluid rounded shadow mb-3'></div>"
+  },
+  {
+    "id": "post-15",
+    "type": "excel",
+    "title": "Excel TEXTJOIN Function",
+    "date": "2025-02-17",
+    "excerpt": "Join multiple text strings with a specified delimiter using TEXTJOIN.",
+    "thumbnail": "../imgs/textjoin.png",
+    "content": "<div class='container py-4'><h2 class='fw-bold text-primary'>💬 TEXTJOIN – Join with a Delimiter</h2><p><code>TEXTJOIN</code> merges multiple text items with a delimiter (like comma or space).</p><pre><code>=TEXTJOIN(delimiter, ignore_empty, text1, [text2], ...)</code></pre><p><strong>Example:</strong> <code>=TEXTJOIN(', ', TRUE, A2:A10)</code> → Joins all non-empty cells from A2:A10 with commas.</p><img src='../imgs/textjoin-example.png' alt='TEXTJOIN Example' class='img-fluid rounded shadow mb-3'></div>"
+  },
+  {
+    "id": "post-16",
+    "type": "excel",
+    "title": "Excel TRANSPOSE Function",
+    "date": "2025-02-17",
+    "excerpt": "Flip rows and columns in a dataset using TRANSPOSE.",
+    "thumbnail": "../imgs/transpose.png",
+    "content": "<div class='container py-4'><h2 class='fw-bold text-info'>🔄 TRANSPOSE – Flip Rows and Columns</h2><p>The <code>TRANSPOSE</code> function switches rows to columns and vice versa.</p><pre><code>=TRANSPOSE(array)</code></pre><p><strong>Example:</strong> <code>=TRANSPOSE(A1:C3)</code> → Converts rows to columns.</p><img src='../imgs/transpose-example.png' alt='TRANSPOSE Example' class='img-fluid rounded shadow mb-3'></div>"
+  },
+  {
+    "id": "post-17",
+    "type": "excel",
+    "title": "Excel SEQUENCE Function",
+    "date": "2025-02-17",
+    "excerpt": "Generate a sequence of numbers dynamically with SEQUENCE.",
+    "thumbnail": "../imgs/sequence.png",
+    "content": "<div class='container py-4'><h2 class='fw-bold text-success'>🔢 SEQUENCE – Auto Number Generator</h2><p>The <code>SEQUENCE</code> function creates an array of sequential numbers.</p><pre><code>=SEQUENCE(rows, [columns], [start], [step])</code></pre><p><strong>Example:</strong> <code>=SEQUENCE(10, 1, 1, 1)</code> → Generates numbers 1 to 10 in a column.</p><img src='../imgs/sequence-example.png' alt='SEQUENCE Example' class='img-fluid rounded shadow mb-3'></div>"
+  },
+  {
+    "id": "post-18",
+    "type": "excel",
+    "title": "Excel LET Function",
+    "date": "2025-02-17",
+    "excerpt": "Simplify complex formulas by defining and reusing variables using LET.",
+    "thumbnail": "../imgs/let.png",
+    "content": "<div class='container py-4'><h2 class='fw-bold text-warning'>🧩 LET – Define Variables in Formulas</h2><p><code>LET</code> assigns names to calculation results, improving readability and performance.</p><pre><code>=LET(name1, value1, calculation)</code></pre><p><strong>Example:</strong> <code>=LET(x, A1*2, x+10)</code> → Doubles A1, then adds 10.</p><img src='../imgs/let-example.png' alt='LET Example' class='img-fluid rounded shadow mb-3'></div>"
+  },
+  {
+    "id": "post-15",
+    "type": "excel",
+    "title": "AVERAGEIFS Function",
+    "date": "2025-03-03",
+    "excerpt": "Average with multiple criteria.",
+    "thumbnail": "../imgs/averageifs.png",
+    "content": "<p><code>=AVERAGEIFS(D2:D10, B2:B10, \">50\", C2:C10, \"<200\")</code> — Calculates conditional averages.</p>"
+  },
+  {
+    "id": "post-16",
+    "type": "excel",
+    "title": "TRANSPOSE Function",
+    "date": "2025-03-04",
+    "excerpt": "Switch rows to columns dynamically reverse.",
+    "thumbnail": "../imgs/transpose.png",
+    "content": "<p><code>=TRANSPOSE(A1:D4)</code> — Converts rows into columns.</p>"
+  },
+  {
+    "id": "post-17",
+    "type": "excel",
+    "title": "SPARKLINE Function",
+    "date": "2025-03-05",
+    "excerpt": "Mini chart inside a cell.",
+    "thumbnail": "../imgs/sparkline.png",
+    "content": "<p><code>=SPARKLINE(B2:B10)</code> — Displays a trendline for data in one cell.</p>"
+  },
+  {
+    "id": "post-18",
+    "type": "excel",
+    "title": "LET Function",
+    "date": "2025-03-06",
+    "excerpt": "Define and reuse variables in formulas.",
+    "thumbnail": "../imgs/let.png",
+    "content": "<p><code>=LET(x, A1*2, y, B1*3, x+y)</code> — Uses named variables to simplify complex logic.</p>"
+  },
+  {
+    "id": "post-19",
+    "type": "excel",
+    "title": "LAMBDA Custom Function",
+    "date": "2025-03-07",
+    "excerpt": "Create your own formulas inside Excel.",
+    "thumbnail": "../imgs/lambda.png",
+    "content": "<p><code>=LAMBDA(x, x*10)(5)</code> — Returns 50 by defining an inline custom function.</p>"
+  },
+  {
+    "id": "post-20",
+    "type": "excel",
+    "title": "Advanced QUERY Joins (Sheets)",
+    "date": "2025-03-08",
+    "excerpt": "Join multiple sheet tables using QUERY.",
+    "thumbnail": "../imgs/query-join.png",
+    "content": "<p><code>=QUERY({Sheet1!A1:D; Sheet2!A1:D}, \"SELECT * WHERE Col4 > 10\")</code> — Merges and filters multiple sheets.</p>"
+  }
+]
