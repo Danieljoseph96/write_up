@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap:https://github.com/Danieljoseph96/write_up.git/sitemap.xml
