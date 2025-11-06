@@ -3,42 +3,121 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>My EXCEL BOOK</title>
+  <title>Excel BOOK</title>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <link rel="stylesheet" href="/assets/scss/main.css">
 </head>
-<body class="bg-light text-dark">
+<body class="excel-grid-bg">
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-excel">
     <div class="container">
       <a class="navbar-brand" href="#">My EXCEL QUERY BOOK</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Posts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 
   <main class="container py-5">
-    <h1 class="mb-4">Posts</h1>
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h1>Posts</h1>
+      <button class="btn btn-excel" id="addPostBtn">+ New Post</button>
+    </div>
 
-    <!-- Filters / search (optional) -->
-    <div class="mb-4">
-      <input id="searchInput" class="form-control" placeholder="Search posts...">
+    <!-- Filters / search -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <input id="searchInput" class="form-control form-control-excel" placeholder="Search posts...">
+      </div>
+      <div class="col-md-3">
+        <select class="form-select form-control-excel" id="categoryFilter">
+          <option value="">All Categories</option>
+          <option value="F">Formulas</option>
+          <option value="charts">Charts</option>
+          <option value="vba">VBA</option>
+          <option value="data">Data Analysis</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <select class="form-select form-control-excel" id="sortFilter">
+          <option value="newest">Newest First</option>
+          <option value="oldest">Oldest First</option>
+          <option value="title">Title A-Z</option>
+        </select>
+      </div>
     </div>
 
     <!-- Posts grid -->
-    <div id="postsRow" class="row g-4"></div>
+    <div id="postsRow" class="row g-4">
+      <!-- Posts will be dynamically inserted here -->
+    </div>
   </main>
 
-  <footer class="text-center py-4 text-muted">
-    © <span id="year"></span> My Blog
+  <footer class="text-center py-4 text-muted mt-5">
+    © <span id="year"></span> My Excel Blog
   </footer>
+
+  <!-- Theme customization panel -->
+  <div class="theme-panel" id="themePanel">
+    <h4>Customize Theme</h4>
+    
+    <div class="mb-4">
+      <h6>Theme Presets</h6>
+      <div class="theme-presets">
+        <div class="theme-preset excel active" data-theme="excel"></div>
+        <div class="theme-preset blue" data-theme="blue"></div>
+        <div class="theme-preset purple" data-theme="purple"></div>
+        <div class="theme-preset orange" data-theme="orange"></div>
+      </div>
+    </div>
+    
+    <h6>Custom Colors</h6>
+    <div class="color-picker">
+      <label for="primaryColor">Primary Color:</label>
+      <input type="color" id="primaryColor" class="color-input" value="#217346">
+    </div>
+    <div class="color-picker">
+      <label for="accentColor">Accent Color:</label>
+      <input type="color" id="accentColor" class="color-input" value="#4472c4">
+    </div>
+    <div class="color-picker">
+      <label for="backgroundColor">Background:</label>
+      <input type="color" id="backgroundColor" class="color-input" value="#f3f3f3">
+    </div>
+    
+    <div class="mt-4">
+      <button class="btn btn-excel w-100" id="applyTheme">Apply Theme</button>
+      <button class="btn btn-outline-secondary w-100 mt-2" id="resetTheme">Reset to Default</button>
+    </div>
+  </div>
+
+  <button class="theme-toggle" id="themeToggle">
+    <i class="fas fa-palette"></i>
+  </button>
 
   <!-- Bootstrap JS bundle (popper included) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Font Awesome for icons -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  <script src="/assets/js/poster.js" ></script>
 
   <!-- App JS -->
-  <script src="assets/js/main.js"></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>

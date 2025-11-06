@@ -1,1 +1,196 @@
-/*# sourceMappingURL=main.css.map */
+:root {
+  --excel-green: #217346;
+  --excel-light-green: #e7f4e4;
+  --excel-dark-green: #1a5c38;
+  --excel-gray: #f3f3f3;
+  --excel-border: #d0d7e0;
+  --excel-header-bg: #f2f2f2;
+  --excel-hover: #e6f3ff;
+  --excel-grid: #e9e9e9;
+  --excel-accent: #4472c4;
+}
+
+.excel-grid-bg {
+  background-image: linear-gradient(var(--excel-grid) 1px, transparent 1px), linear-gradient(90deg, var(--excel-grid) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.navbar-excel {
+  background: linear-gradient(to bottom, var(--excel-green), var(--excel-dark-green)) !important;
+  border-bottom: 1px solid var(--excel-border);
+}
+
+.card-excel {
+  border: 1px solid var(--excel-border);
+  border-radius: 0;
+  background-color: white;
+  transition: all 0.2s ease;
+}
+.card-excel:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-color: var(--excel-accent);
+}
+.card-excel-header {
+  background-color: var(--excel-header-bg);
+  border-bottom: 1px solid var(--excel-border);
+  font-weight: bold;
+  padding: 8px 12px;
+}
+.card-excel-body {
+  padding: 12px;
+}
+
+.btn-excel {
+  background-color: var(--excel-green);
+  color: white;
+  border: none;
+  border-radius: 0;
+  transition: background-color 0.2s ease;
+}
+.btn-excel:hover {
+  background-color: var(--excel-dark-green);
+  color: white;
+}
+
+.form-control-excel {
+  border: 1px solid var(--excel-border);
+  border-radius: 0;
+  transition: border-color box-shadow 0.2s ease;
+}
+.form-control-excel:focus {
+  border-color: var(--excel-accent);
+  box-shadow: 0 0 0 2px rgba(68, 114, 196, 0.25);
+}
+
+.table-excel {
+  border-collapse: collapse;
+  width: 100%;
+}
+.table-excel th {
+  background-color: var(--excel-header-bg);
+  border: 1px solid var(--excel-border);
+  padding: 8px;
+  font-weight: bold;
+}
+.table-excel td {
+  border: 1px solid var(--excel-border);
+  padding: 8px;
+}
+.table-excel tr {
+  transition: background-color 0.2s ease;
+}
+.table-excel tr:hover {
+  background-color: var(--excel-hover);
+}
+
+.theme-panel {
+  position: fixed;
+  right: -300px;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: right 0.3s ease;
+  overflow-y: auto;
+  padding: 20px;
+}
+.theme-panel.open {
+  right: 0;
+}
+
+.theme-toggle {
+  position: fixed;
+  right: 20px;
+  top: 80px;
+  z-index: 1001;
+  background-color: var(--excel-green);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease;
+}
+.theme-toggle:hover {
+  background-color: var(--excel-dark-green);
+}
+
+.color-picker {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.color-picker label {
+  width: 150px;
+  margin-bottom: 0;
+}
+
+.color-input {
+  width: 50px;
+  height: 30px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+.color-input:hover {
+  border-color: #aaa;
+}
+
+.theme-presets {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.theme-preset {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.2s ease;
+}
+.theme-preset.active {
+  border-color: #333;
+}
+.theme-preset.excel {
+  background: linear-gradient(135deg, #217346 50%, #1a5c38 50%);
+}
+.theme-preset.blue {
+  background: linear-gradient(135deg, #2171b5 50%, #08519c 50%);
+}
+.theme-preset.purple {
+  background: linear-gradient(135deg, #6a51a3 50%, #54278f 50%);
+}
+.theme-preset.orange {
+  background: linear-gradient(135deg, #fd8d3c 50%, #e6550d 50%);
+}
+
+@media (max-width: 768px) {
+  .theme-panel {
+    width: 250px;
+    right: -250px;
+  }
+  .theme-toggle {
+    right: 10px;
+    top: 70px;
+    width: 40px;
+    height: 40px;
+  }
+  .color-picker {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .color-picker label {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}/*# sourceMappingURL=main.css.map */

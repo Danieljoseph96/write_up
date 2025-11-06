@@ -1,16 +1,256 @@
-$bg-body: #121212;
-$text-color: #00ff88;
-$font-family: "Courier New", monospace;
-$terminal-bg: #1a1a1a;
-$terminal-header-bg: #2b2b2b;
-$shadow-color: rgba(0, 255, 136, 0.2);
-$dot-red: #ff5f56;
-$dot-yellow: #ffbd2e;
-$dot-green: #27c93f;
-$accent: #00ffaa;
+// Excel-inspired theme variables
+$excel-green: #217346;
+$excel-light-green: #e7f4e4;
+$excel-dark-green: #1a5c38;
+$excel-gray: #f3f3f3;
+$excel-border: #d0d7e0;
+$excel-header-bg: #f2f2f2;
+$excel-hover: #e6f3ff;
+$excel-grid: #e9e9e9;
+$excel-accent: #4472c4;
 
-
-:root{
-
+// CSS custom properties for dynamic theming
+:root {
+  --excel-green: #{$excel-green};
+  --excel-light-green: #{$excel-light-green};
+  --excel-dark-green: #{$excel-dark-green};
+  --excel-gray: #{$excel-gray};
+  --excel-border: #{$excel-border};
+  --excel-header-bg: #{$excel-header-bg};
+  --excel-hover: #{$excel-hover};
+  --excel-grid: #{$excel-grid};
+  --excel-accent: #{$excel-accent};
 }
 
+// Mixin for transitions
+@mixin transition($property: all, $duration: 0.3s, $timing: ease) {
+  transition: $property $duration $timing;
+}
+
+// Mixin for box shadow
+@mixin box-shadow($values) {
+  box-shadow: $values;
+}
+
+// Excel-like grid background
+.excel-grid-bg {
+  background-image: 
+    linear-gradient(var(--excel-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--excel-grid) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+// Excel-inspired navbar
+.navbar-excel {
+  background: linear-gradient(to bottom, var(--excel-green), var(--excel-dark-green)) !important;
+  border-bottom: 1px solid var(--excel-border);
+}
+
+// Excel-like cards
+.card-excel {
+  border: 1px solid var(--excel-border);
+  border-radius: 0;
+  background-color: white;
+  @include transition(all, 0.2s);
+
+  &:hover {
+    @include box-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+    border-color: var(--excel-accent);
+  }
+
+  &-header {
+    background-color: var(--excel-header-bg);
+    border-bottom: 1px solid var(--excel-border);
+    font-weight: bold;
+    padding: 8px 12px;
+  }
+
+  &-body {
+    padding: 12px;
+  }
+}
+
+// Excel-like buttons
+.btn-excel {
+  background-color: var(--excel-green);
+  color: white;
+  border: none;
+  border-radius: 0;
+  @include transition(background-color, 0.2s);
+
+  &:hover {
+    background-color: var(--excel-dark-green);
+    color: white;
+  }
+}
+
+// Excel-like form controls
+.form-control-excel {
+  border: 1px solid var(--excel-border);
+  border-radius: 0;
+  @include transition(border-color box-shadow, 0.2s);
+
+  &:focus {
+    border-color: var(--excel-accent);
+    @include box-shadow(0 0 0 2px rgba(68, 114, 196, 0.25));
+  }
+}
+
+// Excel-like table
+.table-excel {
+  border-collapse: collapse;
+  width: 100%;
+
+  th {
+    background-color: var(--excel-header-bg);
+    border: 1px solid var(--excel-border);
+    padding: 8px;
+    font-weight: bold;
+  }
+
+  td {
+    border: 1px solid var(--excel-border);
+    padding: 8px;
+  }
+
+  tr {
+    @include transition(background-color, 0.2s);
+    
+    &:hover {
+      background-color: var(--excel-hover);
+    }
+  }
+}
+
+// Theme customization panel
+.theme-panel {
+  position: fixed;
+  right: -300px;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  @include box-shadow(-2px 0 10px rgba(0, 0, 0, 0.1));
+  z-index: 1000;
+  @include transition(right, 0.3s);
+  overflow-y: auto;
+  padding: 20px;
+
+  &.open {
+    right: 0;
+  }
+}
+
+.theme-toggle {
+  position: fixed;
+  right: 20px;
+  top: 80px;
+  z-index: 1001;
+  background-color: var(--excel-green);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  @include box-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
+  @include transition(background-color, 0.2s);
+
+  &:hover {
+    background-color: var(--excel-dark-green);
+  }
+}
+
+// Color picker styles
+.color-picker {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+
+  label {
+    width: 150px;
+    margin-bottom: 0;
+  }
+}
+
+.color-input {
+  width: 50px;
+  height: 30px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  @include transition(border-color, 0.2s);
+
+  &:hover {
+    border-color: #aaa;
+  }
+}
+
+// Theme presets
+.theme-presets {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.theme-preset {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  @include transition(border-color, 0.2s);
+
+  &.active {
+    border-color: #333;
+  }
+
+  // Theme variants using mixin for gradient backgrounds
+  @mixin theme-preset-gradient($color1, $color2) {
+    background: linear-gradient(135deg, $color1 50%, $color2 50%);
+  }
+
+  &.excel {
+    @include theme-preset-gradient(#217346, #1a5c38);
+  }
+
+  &.blue {
+    @include theme-preset-gradient(#2171b5, #08519c);
+  }
+
+  &.purple {
+    @include theme-preset-gradient(#6a51a3, #54278f);
+  }
+
+  &.orange {
+    @include theme-preset-gradient(#fd8d3c, #e6550d);
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .theme-panel {
+    width: 250px;
+    right: -250px;
+  }
+  
+  .theme-toggle {
+    right: 10px;
+    top: 70px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .color-picker {
+    flex-direction: column;
+    align-items: flex-start;
+    
+    label {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+  }
+}
